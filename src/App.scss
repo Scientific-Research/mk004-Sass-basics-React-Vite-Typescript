@@ -10,32 +10,44 @@ $main-font-color: yellow; // hyphen and underline are the same in SASS!
 }
 
 body {
-  background-color: #333;
-  margin: 1rem 0;
-  padding: 1rem;
-  font-family: sans-serif;
+  #root {
+    .App {
+      height: 100vh;
+      background-color: #333;
+      margin: 1rem 0;
+      padding: 1rem;
+      font-family: sans-serif;
 
-  p {
-    color: $main-font-color;
-  }
+      p {
+        color: $main-font-color;
+      }
 
-  h1 {
-    color: $headerColor;
-    margin: $headerMargin;
+      h1 {
+        color: $headerColor;
+        margin: $headerMargin;
 
-    &:nth-of-type(1) {
-      margin-top: 0;
+        &:nth-of-type(1) {
+          margin-top: 0;
+        }
+      }
+
+      h2 {
+        color: $headerColor;
+        margin: $headerMargin;
+      }
+
+      h3 {
+        $headerColor: rgb(101, 71, 16); // Overriding
+        color: $headerColor;
+        margin: $headerMargin;
+      }
+
+      .content {
+        p {
+          background-color: rgb(130, 77, 8);
+          color: blue;
+        }
+      }
     }
-  }
-
-  h2 {
-    color: $headerColor;
-    margin: $headerMargin;
-  }
-
-  h3 {
-    $headerColor: rgb(101, 71, 16); // Overriding
-    color: $headerColor;
-    margin: $headerMargin;
   }
 }
