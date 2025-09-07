@@ -1,5 +1,7 @@
 $headerColor: orange;
 $headerMargin: 1rem 0;
+$main-font-color: yellow; // hyphen and underline are the same in SASS!
+// $main_font_color: blue;
 
 * {
   margin: 0;
@@ -12,6 +14,10 @@ body {
   margin: 1rem 0;
   padding: 1rem;
   font-family: sans-serif;
+
+  p {
+    color: $main-font-color;
+  }
 
   h1 {
     color: $headerColor;
