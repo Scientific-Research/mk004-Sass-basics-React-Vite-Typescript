@@ -28,6 +28,7 @@ body {
   }
 
   h3 {
+    $headerColor: rgb(101, 71, 16); // Overriding
     color: $headerColor;
     margin: $headerMargin;
   }
